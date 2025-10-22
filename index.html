@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{PREF_NAME}}の観光地一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>{{PREF_NAME}} / {{PREF_ROMAJI}}</h1>
+  </header>
+
+  <main class="card-container">
+    <!-- 観光地カード -->
+    {{CARDS}}
+    <!-- コピーして増やす -->
+    <!-- 
+    <div class="card">
+      <a href="{{SPOT_LINK}}">
+        <img src="images/{{SPOT_IMAGE}}" alt="{{SPOT_NAME}}">
+        <h2>{{SPOT_NAME}}</h2>
+        <p>{{SPOT_TAGS}}</p>
+      </a>
+    </div>
+    -->
+  </main>
+</body>
+</html>
