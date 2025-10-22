@@ -21,46 +21,67 @@ header h1 {
   font-size: 2rem;
 }
 
-/* カードコンテナ */
+/* コンテナ */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* カード1枚 */
+/* カード自体 */
 .card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none; /* aタグにしても下線消す */
-  color: inherit; /* aタグにしても文字色維持 */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ホバー時のアニメーション */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* カード画像 */
+/* 写真部分 */
 .card img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
-  display: block;
 }
 
-/* カードテキスト */
-.card h2 {
-  font-size: 1.2rem;
-  margin: 0.5rem;
+/* カード内容 */
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.card p {
-  font-size: 0.9rem;
-  margin: 0 0.5rem 0.5rem 0.5rem;
+/* 観光地名 */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* タグ */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card-tags span {
+  background-color: #f0f0f0;
   color: #555;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 8px;
 }
