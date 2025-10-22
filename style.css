@@ -1,0 +1,66 @@
+/* style.css */
+
+/* ページ全体 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* ヘッダー */
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* カードコンテナ */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* カード1枚 */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none; /* aタグにしても下線消す */
+  color: inherit; /* aタグにしても文字色維持 */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* カード画像 */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* カードテキスト */
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  color: #555;
+}
